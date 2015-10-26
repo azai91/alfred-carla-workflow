@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>carla</string>
+	<string>com.carla.azai91</string>
 	<key>connections</key>
 	<dict>
 		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
@@ -21,7 +21,7 @@
 	<key>createdby</key>
 	<string>azai91</string>
 	<key>description</key>
-	<string></string>
+	<string>Use Carla.io more effectively</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -97,6 +97,6 @@
 		</dict>
 	</dict>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/azai91</string>
 </dict>
 </plist>
