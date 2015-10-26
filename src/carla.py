@@ -1,9 +1,9 @@
 from pushbullet import Pushbullet
 from workflow import Workflow, PasswordNotFound, ICON_TRASH, ICON_WARNING, ICON_USER
-from config import api_key
+from config import ACCESS_TOKEN
 
 wf = Workflow()
-pb = Pushbullet(api_key)
+pb = Pushbullet(ACCESS_TOKEN)
 
 def main(_):
   user_input = wf.args[0]
