@@ -11,9 +11,9 @@ def main(_):
   if message[:3] in 'set':
     index = wf.args[0].split(' ')[1]
     wf.store_data('pb_device', pb.devices[int(index)])
-  else:
+  elif message[:4] in 'text':
     device = wf.stored_data('pb_device')
-    pb.push_sms(device, '2134657640', message)
+    pb.push_sms(device, '2134657640', message[5:])
 
 if __name__ == '__main__':
   wf.run(main)

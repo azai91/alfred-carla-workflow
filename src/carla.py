@@ -11,6 +11,7 @@ def main(_):
 
   if options:
     show_devices()
+    return 0
   elif wf.stored_data('pb_device'):
     wf.add_item(title=user_input,
       arg='text %s' % user_input,
