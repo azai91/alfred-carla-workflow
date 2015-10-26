@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>pushbullet</string>
+	<string>carla</string>
 	<key>connections</key>
 	<dict/>
 	<key>createdby</key>
@@ -13,13 +13,77 @@
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
-	<string>Pushbullet</string>
+	<string>Carla</string>
 	<key>objects</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>c</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>script</key>
+				<string>python carla.py "{query}"</string>
+				<key>title</key>
+				<string>Carla</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>68B03567-4AF9-4259-80EC-F494AA84B635</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query="{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>9FD4D388-5961-4963-8F9C-22670273B1AF</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
-	<dict/>
+	<dict>
+		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>9FD4D388-5961-4963-8F9C-22670273B1AF</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
 	<key>webaddress</key>
 	<string></string>
 </dict>
