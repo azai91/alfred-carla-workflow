@@ -5,7 +5,19 @@
 	<key>bundleid</key>
 	<string>carla</string>
 	<key>connections</key>
-	<dict/>
+	<dict>
+		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>9FD4D388-5961-4963-8F9C-22670273B1AF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
 	<key>createdby</key>
 	<string>azai91</string>
 	<key>description</key>
@@ -57,7 +69,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>query="{query}"</string>
+				<string>python carla_launcher.py "{query}"</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>

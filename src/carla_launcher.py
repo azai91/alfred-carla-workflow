@@ -6,10 +6,14 @@ wf = Workflow()
 pb = Pushbullet(api_key)
 
 def main(_):
-  wf.store_data('pb_device', pb.devices[0])
-  pb.push_sms(pb.devices[0], '3108533732', 'Test1')
+  message = wf.args[0]
 
-
+  if message[:3] in 'set':
+    index = wf.args[0].split(' ')[1]
+    wf.store_data('pb_device', pb.devices[int(index)])
+  else:
+    device = wf.stored_data('pb_device')
+    pb.push_sms(device, '2134657640', message)
 
 if __name__ == '__main__':
   wf.run(main)
