@@ -17,7 +17,8 @@ def main(_):
   if options:
     show_devices(pb.devices)
   elif wf.stored_data('pb_device'):
-    wf.add_item(title=user_input,
+    wf.add_item(title="Sending Carla Message",
+      subtitle=user_input,
       arg='text %s' % user_input,
       valid=True)
     wf.send_feedback()
@@ -35,9 +36,6 @@ def show_error(error_name):
   wf.add_item(title=error_name,
     icon=ICON_WARNING)
   wf.send_feedback()
-
-
-
 
 if __name__ == '__main__':
   wf.run(main)
