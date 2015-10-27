@@ -48,7 +48,7 @@
 				<key>script</key>
 				<string>python carla.py "{query}"</string>
 				<key>title</key>
-				<string>Carla</string>
+				<string>Send Message to Carla</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>

@@ -17,7 +17,7 @@ def main(_):
   if options:
     show_devices(pb.devices)
   elif wf.stored_data('pb_device'):
-    wf.add_item(title="Sending Carla Message",
+    wf.add_item(title="Sending Carla",
       subtitle=user_input,
       arg='text %s' % user_input,
       valid=True)
