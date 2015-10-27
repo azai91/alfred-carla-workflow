@@ -1,6 +1,6 @@
 from workflow import Workflow, PasswordNotFound, ICON_TRASH, ICON_WARNING, ICON_USER
 from pushbullet import Pushbullet
-from config import ACCESS_TOKEN
+from config import ACCESS_TOKEN, CARLA_PHONE
 
 wf = Workflow()
 pb = Pushbullet(ACCESS_TOKEN)
@@ -13,7 +13,7 @@ def main(_):
     wf.store_data('pb_device', pb.devices[int(index)])
   elif message[:4] in 'text':
     device = wf.stored_data('pb_device')
-    pb.push_sms(device, '2134657640', message[5:])
+    pb.push_sms(device, CARLA_PHONE , message[5:])
 
 if __name__ == '__main__':
   wf.run(main)
