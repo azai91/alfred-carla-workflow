@@ -102,7 +102,7 @@ Carla.set_device("{query}")</string>
 			<key>config</key>
 			<dict>
 				<key>argumenttype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
@@ -118,7 +118,7 @@ Carla.set_device("{query}")</string>
 				<key>script</key>
 				<string>python carla.py "{query}"</string>
 				<key>title</key>
-				<string>Set Device</string>
+				<string>Carla Settings</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
