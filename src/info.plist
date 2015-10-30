@@ -6,11 +6,22 @@
 	<string>com.carla.azai91</string>
 	<key>connections</key>
 	<dict>
-		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
+		<key>420A3813-AB0D-4AD7-BC45-FEB88BB1A280</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>9FD4D388-5961-4963-8F9C-22670273B1AF</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>43BFCCEA-8557-47CD-A8AF-3682E81BA53A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,10 +44,69 @@
 			<dict>
 				<key>argumenttype</key>
 				<integer>0</integer>
+				<key>keyword</key>
+				<string>c</string>
+				<key>text</key>
+				<string>Send Message to Carla</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>420A3813-AB0D-4AD7-BC45-FEB88BB1A280</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>from carla_api import Carla
+Carla.send_message("{query}")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>9FD4D388-5961-4963-8F9C-22670273B1AF</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>from carla_api import Carla
+Carla.set_device("{query}")</string>
+				<key>type</key>
+				<integer>3</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.script</string>
+			<key>uid</key>
+			<string>43BFCCEA-8557-47CD-A8AF-3682E81BA53A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>c</string>
+				<string>cs</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -48,7 +118,7 @@
 				<key>script</key>
 				<string>python carla.py "{query}"</string>
 				<key>title</key>
-				<string>Send Message to Carla</string>
+				<string>Set Device</string>
 				<key>type</key>
 				<integer>0</integer>
 				<key>withspace</key>
@@ -61,34 +131,25 @@
 			<key>version</key>
 			<integer>0</integer>
 		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>python carla_launcher.py "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.script</string>
-			<key>uid</key>
-			<string>9FD4D388-5961-4963-8F9C-22670273B1AF</string>
-			<key>version</key>
-			<integer>0</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
+		<key>420A3813-AB0D-4AD7-BC45-FEB88BB1A280</key>
 		<dict>
 			<key>ypos</key>
 			<real>10</real>
+		</dict>
+		<key>43BFCCEA-8557-47CD-A8AF-3682E81BA53A</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
+		</dict>
+		<key>68B03567-4AF9-4259-80EC-F494AA84B635</key>
+		<dict>
+			<key>ypos</key>
+			<real>140</real>
 		</dict>
 		<key>9FD4D388-5961-4963-8F9C-22670273B1AF</key>
 		<dict>
