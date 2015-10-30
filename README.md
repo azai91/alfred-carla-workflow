@@ -12,7 +12,7 @@ ACCESS_TOKEN="{YOUR_ACCESS_TOKEN}"
 Your access token can be found [here](https://www.pushbullet.com/account).
 
 ##Commands
-- ```c > device```
+- ```cs SET DEVICE```
 - ```c {query}```
 
 ###Please leave issues if you encounter any problems or star this repo if you found it useful :)
