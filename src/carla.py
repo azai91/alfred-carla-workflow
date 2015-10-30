@@ -3,21 +3,22 @@ from workflow import Workflow, PasswordNotFound, ICON_TRASH, ICON_WARNING, ICON_
 from config import ACCESS_TOKEN
 
 wf = Workflow()
-settings = 'Set Device'
+settings = 'SET DEVICE'
 
 def main():
   user_input = wf.args[0]
+  pb = None
+
   try:
-    pb = Pushbullet(ACCESS_TOKEN)
+    pb = wf.stored_data('carla_pb')
   except:
-    show_error('Invalid ACCESS_TOKEN');
-    # return 0
+    pb = get_pb()
 
   if not user_input or user_input.lower() in settings.lower():
     wf.add_item(title=settings,
-      autocomplete='Set Device ',
+      autocomplete='%s ' % settings,
       valid=False)
-  elif 'Set Device '.lower() in user_input.lower():
+  elif ('%s ' % settings).lower() in user_input.lower():
     show_devices(pb.devices)
 
   wf.send_feedback()
@@ -27,6 +28,14 @@ def show_devices(devices):
     wf.add_item(title=device.__dict__['nickname'],
       arg=str(index),
       valid=True)
+
+def get_pb():
+  try:
+    pb = Pushbullet(ACCESS_TOKEN)
+    wf.store_data('carla_pb', pb)
+  except:
+    show_error('Invalid ACCESS_TOKEN');
+    return 0
 
 def show_error(error_name):
   wf.add_item(title=error_name,
